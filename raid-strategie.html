@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+            crossorigin="anonymous"></script>
+
+            <script src=
+            "https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js">
+              </script>
+    <script src="script.js"></script>
+</head>
+<body>
+
+<div class="row">
+    <div class="col-md-1">
+        <label for="boss-select">Choose a Boss:</label>
+    </div>
+    <div class="col-md-4">
+
+        <!-- Native HTML autocomplete -->
+<!--        <input list="boss" placeholder="Choose a boos" onchange="selectBoss(this);"/>-->
+<!--        <datalist id="boss">-->
+<!--            <option value="Sterl.gif">Sterl</option>-->
+<!--            <option value="Takedar.gif">Takedar</option>-->
+<!--            <option value="Jukk.gif">Jukk</option>-->
+<!--            <option value="Lojak.gif">Lojak</option>-->
+<!--            <option value="Terro.gif">Terro</option>-->
+<!--            <option value="Mohaca.gif">Mohaca</option>-->
+<!--        </datalist>-->
+
+        <select name="boss" id="boss-select" onchange="selectBoss(this);">
+            <option value="">--Please choose your boss--</option>
+            <option value="Instructions.gif">Instructions</option>
+            <option value="Jukk.gif">Jukk</option>
+            <option value="Lojak.gif">Lojak</option>
+            <option value="Mohaca.gif">Mohaca</option>
+            <option value="Sterl.gif">Sterl</option>
+            <option value="Takedar.gif">Takedar</option>
+            <option value="Terro.gif">Terro</option>
+        </select>
+    </div>
+</div>
+
+
+<form>
+
+        <div class="row">
+            <div class="col-md-2">
+                <h2>RIGHT SHOULDER</h2>
+                <fieldset>
+                    <input type="radio" id="right-shoulder-attack"
+                           name="right-shoulder" value="attack" checked>
+                    <label for="right-shoulder-attack">Attack</label>
+
+                    <input type="radio" id="right-shoulder-forbidden"
+                           name="right-shoulder" value="forbidden" >
+                    <label for="right-shoulder-forbidden">Forbidden</label>
+
+                    <input type="radio" id="right-shoulder-vm"
+                           name="right-shoulder" value="vm">
+                    <label for="right-shoulder-vm">VM</label>
+
+                    <input type="radio" id="right-shoulder-cursed"
+                           name="right-shoulder" value="cursed">
+                    <label for="right-shoulder-cursed">Cursed</label>
+                </fieldset>
+            </div>
+            <div class="col-md-2">
+                <h2>HEAD</h2>
+                <fieldset>
+                    <input type="radio" id="head-attack"
+                           name="head" value="attack" checked>
+                    <label for="head-attack">Attack</label>
+
+                    <input type="radio" id="head-forbidden"
+                           name="head" value="forbidden" >
+                    <label for="head-forbidden">Forbidden</label>
+
+                    <input type="radio" id="head-vm"
+                           name="head" value="vm">
+                    <label for="head-vm">VM</label>
+
+                    <input type="radio" id="head-cursed"
+                           name="head" value="cursed">
+                    <label for="head-cursed">Cursed</label>
+                </fieldset>
+            </div>
+            <div class="col-md-2">
+                <h2>LEFT SHOULDER</h2>
+                <fieldset>
+                    <input type="radio" id="left-shoulder-attack"
+                           name="left-shoulder" value="attack" checked>
+                    <label for="left-shoulder-attack">Attack</label>
+
+                    <input type="radio" id="left-shoulder-forbidden"
+                           name="left-shoulder" value="forbidden" >
+                    <label for="left-shoulder-forbidden">Forbidden</label>
+
+                    <input type="radio" id="left-shoulder-vm"
+                           name="left-shoulder" value="vm">
+                    <label for="left-shoulder-vm">VM</label>
+
+                    <input type="radio" id="left-shoulder-cursed"
+                           name="left-shoulder" value="cursed">
+                    <label for="left-shoulder-cursed">Cursed</label>
+                </fieldset>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-2">
+                <h2>RIGHT HAND</h2>
+                <fieldset>
+                    <input type="radio" id="right-hand-attack"
+                           name="right-hand" value="attack" checked>
+                    <label for="right-hand-attack">Attack</label>
+
+                    <input type="radio" id="right-hand-forbidden"
+                           name="right-hand" value="forbidden" >
+                    <label for="right-hand-forbidden">Forbidden</label>
+
+                    <input type="radio" id="right-hand-vm"
+                           name="right-hand" value="vm">
+                    <label for="right-hand-vm">VM</label>
+
+                    <input type="radio" id="right-hand-cursed"
+                           name="right-hand" value="cursed">
+                    <label for="right-hand-cursed">Cursed</label>
+                </fieldset>
+            </div>
+            <div class="col-md-2">
+                <h2>TORSO</h2>
+                <fieldset>
+                    <input type="radio" id="torso-attack"
+                           name="torso" value="attack" checked>
+                    <label for="torso-attack">Attack</label>
+
+                    <input type="radio" id="torso-forbidden"
+                           name="torso" value="forbidden" >
+                    <label for="torso-forbidden">Forbidden</label>
+
+                    <input type="radio" id="torso-vm"
+                           name="torso" value="vm">
+                    <label for="torso-vm">VM</label>
+
+                    <input type="radio" id="torso-cursed"
+                           name="torso" value="cursed">
+                    <label for="torso-cursed">Cursed</label>
+                </fieldset>
+            </div>
+
+            <div class="col-md-2">
+                <h2>LEFT HAND</h2>
+                <fieldset>
+                    <input type="radio" id="left-hand-attack"
+                           name="left-hand" value="attack" checked>
+                    <label for="left-hand-attack">Attack</label>
+
+                    <input type="radio" id="left-hand-forbidden"
+                           name="left-hand" value="forbidden" >
+                    <label for="left-hand-forbidden">Forbidden</label>
+
+                    <input type="radio" id="left-hand-vm"
+                           name="left-hand" value="vm">
+                    <label for="left-hand-vm">VM</label>
+
+                    <input type="radio" id="left-hand-cursed"
+                           name="left-hand" value="cursed">
+                    <label for="left-hand-cursed">Cursed</label>
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2 offset-md-1">
+                <h2>RIGHT LEG</h2>
+                <fieldset>
+                    <input type="radio" id="right-leg-attack"
+                           name="right-leg" value="attack" checked>
+                    <label for="right-leg-attack">Attack</label>
+
+                    <input type="radio" id="right-leg-forbidden"
+                           name="right-leg" value="forbidden" >
+                    <label for="right-leg-forbidden">Forbidden</label>
+
+                    <input type="radio" id="right-leg-vm"
+                           name="right-leg" value="vm">
+                    <label for="right-leg-vm">VM</label>
+
+                    <input type="radio" id="right-leg-cursed"
+                           name="right-leg" value="cursed">
+                    <label for="right-leg-cursed">Cursed</label>
+                </fieldset>
+            </div>
+            <div class="col-md-2">
+                <h2>LEFT LEG</h2>
+                <fieldset>
+                    <input type="radio" id="left-leg-attack"
+                           name="left-leg" value="attack" checked>
+                    <label for="left-leg-attack">Attack</label>
+
+                    <input type="radio" id="left-leg-forbidden"
+                           name="left-leg" value="forbidden" >
+                    <label for="left-leg-forbidden">Forbidden</label>
+
+                    <input type="radio" id="left-leg-vm"
+                           name="left-leg" value="vm">
+                    <label for="left-leg-vm">VM</label>
+
+                    <input type="radio" id="left-leg-cursed"
+                           name="left-leg" value="cursed">
+                    <label for="left-leg-cursed">Cursed</label>
+                </fieldset>
+            </div>
+        </div>
+</form>
+</br>
+<label for="pattern-strategy">Strategy by pattern</label>
+<input type="text" id="pattern-strategy" name="pattern-strategy" onchange="applyStrategyByPattern('field');"/>
+<div width="800px" class="row">
+    <div width="800px" id="image" class="col-md raid-css">
+        <div width="800px" class="strategy hidden">
+            <img src="icon/ToAttack.gif" class="head"/>
+            <img src="icon/ToAttack.gif" class="torso"/>
+            <img src="icon/ToAttack.gif" class="left-shoulder"/>
+            <img src="icon/ToAttack.gif" class="left-hand"/>
+            <img src="icon/ToAttack.gif" class="left-leg"/>
+            <img src="icon/ToAttack.gif" class="right-shoulder"/>
+            <img src="icon/ToAttack.gif" class="right-hand"/>
+            <img src="icon/ToAttack.gif" class="right-leg"/>
+        </div>
+        <img src="img/Instructions.gif" id="boss-image" width="800px"/>
+    </div>
+</div>
+<div width="800px" id="output"></div>
+</body>
+</html>

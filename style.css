@@ -1,0 +1,344 @@
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+table {
+    width:70%;
+}
+
+body{
+    background-color: rgba(51,54,69,1);
+    margin-top:1rem;
+    color: white;
+}
+
+h1,h2{
+    color: white;
+    /*text-align: center;*/
+    /*justify-content: center;*/
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.display-none{
+    display:none;
+}
+
+.raid-css img{
+    --icon-size:100px;
+    --boss-size:800px;
+}
+
+.head{
+    /* variables */
+    --head-default-top:447px;
+    --head-default-left:348px;
+    --head-relative-top:0px;
+    --head-relative-left:0px;
+
+    /* Computation */
+    --head-top:calc(var(--head-default-top) + var(--head-relative-top));
+    --head-left:calc(var(--head-default-left) + var(--head-relative-left));
+
+    /* Physical evaluation */
+    position: absolute;
+    width: var(--icon-size);
+    top:var(--head-top);
+    left:var(--head-left);
+}
+
+.torso{
+    /* variables */
+    --torso-default-top:628px;
+    --torso-default-left:354px;
+    --torso-relative-top:0px;
+    --torso-relative-left:0px;
+
+    /* Computation */
+    --torso-top:calc(var(--torso-default-top) + var(--torso-relative-top));
+    --torso-left:calc(var(--torso-default-left) + var(--torso-relative-left));
+
+    /* Physical evaluation */
+    position: absolute;
+    width: var(--icon-size);
+    top:var(--torso-top);
+    left:var(--torso-left);
+}
+
+
+
+.right-hand{
+    /* variables */
+    --right-default-hand-top:715px;
+    --right-default-hand-left:121px;
+    --right-relative-hand-top:0px;
+    --right-relative-hand-left:0px;
+
+
+    --right-hand-top:calc(var(--right-default-hand-top) + var(--right-relative-hand-top));
+    --right-hand-left:calc(var(--right-default-hand-left) + var(--right-relative-hand-left));
+
+    position: absolute;
+    width: var(--icon-size);
+    top:var(--right-hand-top);
+    left:var(--right-hand-left);
+}
+
+.right-shoulder{
+    /* variables */
+    --right-default-shoulder-top:453px;
+    --right-default-shoulder-left:139px;
+    --right-relative-shoulder-top:0px;
+    --right-relative-shoulder-left:0px;
+
+    --right-shoulder-top:calc(var(--right-default-shoulder-top) + var(--right-relative-shoulder-top));
+    --right-shoulder-left:calc(var(--right-default-shoulder-left) + var(--right-relative-shoulder-left));
+
+    position: absolute;
+    width: var(--icon-size);
+    top:var(--right-shoulder-top);
+    left:var(--right-shoulder-left);
+}
+
+.right-leg{
+    /* variables */
+    --right-default-leg-top:835px;
+    --right-default-leg-left:264px;
+    --right-relative-leg-top:0px;
+    --right-relative-leg-left:0px;
+
+    --right-leg-top:calc(var(--right-default-leg-top) + var(--right-relative-leg-top));
+    --right-leg-left:calc(var(--right-default-leg-left) + var(--right-relative-leg-left));
+
+    position: absolute;
+    width: var(--icon-size);
+    top:var(--right-leg-top);
+    left:var(--right-leg-left);
+}
+
+.left-hand{
+    /* variables */
+    --left-default-hand-top:715px;
+    --left-default-hand-left:576px;
+    --left-relative-hand-top:0px;
+    --left-relative-hand-left:0px;
+    --left-hand-top:calc(var(--left-default-hand-top) + var(--left-relative-hand-top));
+    --left-hand-left:calc(var(--left-default-hand-left) + var(--left-relative-hand-left));
+
+    position: absolute;
+    width: var(--icon-size);
+    top:var(--left-hand-top);
+    left:var(--left-hand-left);
+}
+
+.left-shoulder{
+    /* variables */
+    --left-default-shoulder-top:453px;
+    --left-default-shoulder-left:561px;
+    --left-relative-shoulder-top:0px;
+    --left-relative-shoulder-left:0px;
+    --left-shoulder-top:calc(var(--left-default-shoulder-top) + var(--left-relative-shoulder-top));
+    --left-shoulder-left:calc(var(--left-default-shoulder-left) + var(--left-relative-shoulder-left));
+
+    position: absolute;
+    width: var(--icon-size);
+    top:var(--left-shoulder-top);
+    left:var(--left-shoulder-left);
+}
+
+.left-leg{
+    /* variables */
+    --left-default-leg-top:835px;
+    --left-default-leg-left:445px;
+    --left-relative-leg-top:0px;
+    --left-relative-leg-left:0px;
+    --left-leg-top:calc(var(--left-default-leg-top) + var(--left-relative-leg-top));
+    --left-leg-left:calc(var(--left-default-leg-left) + var(--left-relative-leg-left));
+
+    position: absolute;
+    width: var(--icon-size);
+    top:var(--left-leg-top);
+    left:var(--left-leg-left);
+}
+
+
+/*Specific tunning per boss*/
+#Sterl .head,
+#Sterl .torso,
+#Sterl .left-shoulder,
+#Sterl .left-hand,
+#Sterl .left-leg,
+#Sterl .right-shoulder,
+#Sterl .right-hand,
+#Sterl .right-leg{
+    --default-relative-top:0px;
+    --default-relative-left:0px;
+
+    --head-relative-top:var(--default-relative-top);
+    --head-relative-left:var(--default-relative-left);
+    --torso-relative-top:var(--default-relative-top);
+    --torso-relative-left:var(--default-relative-left);
+    --right-relative-hand-top:var(--default-relative-top);
+    --right-relative-hand-left:var(--default-relative-left);
+    --right-relative-shoulder-top:var(--default-relative-top);
+    --right-relative-shoulder-left:var(--default-relative-left);
+    --right-relative-leg-top:var(--default-relative-top);
+    --right-relative-leg-left:var(--default-relative-left);
+    --left-relative-hand-top:var(--default-relative-top);
+    --left-relative-hand-left:var(--default-relative-left);
+    --left-relative-shoulder-top:var(--default-relative-top);
+    --left-relative-shoulder-left:var(--default-relative-left);
+    --left-relative-leg-top:var(--default-relative-top);
+    --left-relative-leg-left:var(--default-relative-left);
+}
+
+#Terro .head,
+#Terro .torso,
+#Terro .left-shoulder,
+#Terro .left-hand,
+#Terro .left-leg,
+#Terro .right-shoulder,
+#Terro .right-hand,
+#Terro .right-leg{
+    --default-relative-top:0px;
+    --default-relative-left:-3px;
+
+    --head-relative-top:var(--default-relative-top);
+    --head-relative-left:var(--default-relative-left);
+    --torso-relative-top:var(--default-relative-top);
+    --torso-relative-left:var(--default-relative-left);
+    --right-relative-hand-top:var(--default-relative-top);
+    --right-relative-hand-left:var(--default-relative-left);
+    --right-relative-shoulder-top:var(--default-relative-top);
+    --right-relative-shoulder-left:var(--default-relative-left);
+    --right-relative-leg-top:var(--default-relative-top);
+    --right-relative-leg-left:var(--default-relative-left);
+    --left-relative-hand-top:var(--default-relative-top);
+    --left-relative-hand-left:var(--default-relative-left);
+    --left-relative-shoulder-top:var(--default-relative-top);
+    --left-relative-shoulder-left:var(--default-relative-left);
+    --left-relative-leg-top:var(--default-relative-top);
+    --left-relative-leg-left:var(--default-relative-left);
+}
+
+
+#Takedar .head,
+#Takedar .torso,
+#Takedar .left-shoulder,
+#Takedar .left-hand,
+#Takedar .left-leg,
+#Takedar .right-shoulder,
+#Takedar .right-hand,
+#Takedar .right-leg{
+    --default-relative-top:23px;
+    --default-relative-left:1px;
+
+    --head-relative-top:var(--default-relative-top);
+    --head-relative-left:var(--default-relative-left);
+    --torso-relative-top:var(--default-relative-top);
+    --torso-relative-left:var(--default-relative-left);
+    --right-relative-hand-top:var(--default-relative-top);
+    --right-relative-hand-left:var(--default-relative-left);
+    --right-relative-shoulder-top:var(--default-relative-top);
+    --right-relative-shoulder-left:var(--default-relative-left);
+    --right-relative-leg-top:var(--default-relative-top);
+    --right-relative-leg-left:var(--default-relative-left);
+    --left-relative-hand-top:var(--default-relative-top);
+    --left-relative-hand-left:var(--default-relative-left);
+    --left-relative-shoulder-top:var(--default-relative-top);
+    --left-relative-shoulder-left:var(--default-relative-left);
+    --left-relative-leg-top:var(--default-relative-top);
+    --left-relative-leg-left:var(--default-relative-left);
+}
+
+#Jukk .head,
+#Jukk .torso,
+#Jukk .left-shoulder,
+#Jukk .left-hand,
+#Jukk .left-leg,
+#Jukk .right-shoulder,
+#Jukk .right-hand,
+#Jukk .right-leg{
+    --default-relative-top:-30px;
+    --default-relative-left:3px;
+
+    --head-relative-top:var(--default-relative-top);
+    --head-relative-left:var(--default-relative-left);
+    --torso-relative-top:var(--default-relative-top);
+    --torso-relative-left:var(--default-relative-left);
+    --right-relative-hand-top:var(--default-relative-top);
+    --right-relative-hand-left:var(--default-relative-left);
+    --right-relative-shoulder-top:var(--default-relative-top);
+    --right-relative-shoulder-left:var(--default-relative-left);
+    --right-relative-leg-top:var(--default-relative-top);
+    --right-relative-leg-left:var(--default-relative-left);
+    --left-relative-hand-top:var(--default-relative-top);
+    --left-relative-hand-left:var(--default-relative-left);
+    --left-relative-shoulder-top:var(--default-relative-top);
+    --left-relative-shoulder-left:var(--default-relative-left);
+    --left-relative-leg-top:var(--default-relative-top);
+    --left-relative-leg-left:var(--default-relative-left);
+}
+
+#Lojak .head,
+#Lojak .torso,
+#Lojak .left-shoulder,
+#Lojak .left-hand,
+#Lojak .left-leg,
+#Lojak .right-shoulder,
+#Lojak .right-hand,
+#Lojak .right-leg{
+    --default-relative-top:-6px;
+    --default-relative-left:7px;
+
+    --head-relative-top:var(--default-relative-top);
+    --head-relative-left:var(--default-relative-left);
+    --torso-relative-top:var(--default-relative-top);
+    --torso-relative-left:var(--default-relative-left);
+    --right-relative-hand-top:var(--default-relative-top);
+    --right-relative-hand-left:var(--default-relative-left);
+    --right-relative-shoulder-top:var(--default-relative-top);
+    --right-relative-shoulder-left:var(--default-relative-left);
+    --right-relative-leg-top:var(--default-relative-top);
+    --right-relative-leg-left:var(--default-relative-left);
+    --left-relative-hand-top:var(--default-relative-top);
+    --left-relative-hand-left:var(--default-relative-left);
+    --left-relative-shoulder-top:var(--default-relative-top);
+    --left-relative-shoulder-left:var(--default-relative-left);
+    --left-relative-leg-top:var(--default-relative-top);
+    --left-relative-leg-left:var(--default-relative-left);
+}
+
+
+#Mohaca .head,
+#Mohaca .torso,
+#Mohaca .left-shoulder,
+#Mohaca .left-hand,
+#Mohaca .left-leg,
+#Mohaca .right-shoulder,
+#Mohaca .right-hand,
+#Mohaca .right-leg{
+    --default-relative-top:-15px;
+    --default-relative-left:0px;
+
+    --head-relative-top:var(--default-relative-top);
+    --head-relative-left:var(--default-relative-left);
+    --torso-relative-top:var(--default-relative-top);
+    --torso-relative-left:var(--default-relative-left);
+    --right-relative-hand-top:var(--default-relative-top);
+    --right-relative-hand-left:var(--default-relative-left);
+    --right-relative-shoulder-top:var(--default-relative-top);
+    --right-relative-shoulder-left:var(--default-relative-left);
+    --right-relative-leg-top:var(--default-relative-top);
+    --right-relative-leg-left:var(--default-relative-left);
+    --left-relative-hand-top:var(--default-relative-top);
+    --left-relative-hand-left:var(--default-relative-left);
+    --left-relative-shoulder-top:var(--default-relative-top);
+    --left-relative-shoulder-left:var(--default-relative-left);
+    --left-relative-leg-top:var(--default-relative-top);
+    --left-relative-leg-left:var(--default-relative-left);
+}
+
