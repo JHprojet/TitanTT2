@@ -342,3 +342,77 @@ h1,h2{
     --left-relative-leg-left:var(--default-relative-left);
 }
 
+
+#Klonk .head,
+#Klonk .torso,
+#Klonk .left-shoulder,
+#Klonk .left-hand,
+#Klonk .left-leg,
+#Klonk .right-shoulder,
+#Klonk .right-hand,
+#Klonk .right-leg{
+    --default-relative-top:80px;
+    --default-relative-left:-23px;
+    --fix-right-hand-left:26px;
+    --fix-right-hand-top:-76px;
+    --fix-left-hand-left:-21px;
+    --fix-left-hand-top:-66px;
+
+    --fix-left-leg-left:-18px;
+    --fix-right-shoulder-left:23px;
+    --fix-left-shoulder-left:-30px;
+
+    --head-relative-top:var(--default-relative-top);
+    --head-relative-left:var(--default-relative-left);
+    --torso-relative-top:var(--default-relative-top);
+    --torso-relative-left:var(--default-relative-left);
+    --right-relative-hand-top:calc(var(--default-relative-top) + var(--fix-right-hand-top));
+    --right-relative-hand-left:calc(var(--default-relative-left) + var(--fix-right-hand-left));
+    --right-relative-shoulder-top:var(--default-relative-top);
+    --right-relative-shoulder-left:calc(var(--default-relative-left) + var(--fix-right-shoulder-left));
+    --right-relative-leg-top:var(--default-relative-top);
+    --right-relative-leg-left:var(--default-relative-left);
+    --left-relative-hand-top:calc(var(--default-relative-top) + var(--fix-left-hand-top));
+    --left-relative-hand-left:calc(var(--default-relative-left) + var(--fix-left-hand-left));
+    --left-relative-shoulder-top:var(--default-relative-top);
+    --left-relative-shoulder-left:calc(var(--default-relative-left) + var(--fix-left-shoulder-left));
+    --left-relative-leg-top:var(--default-relative-top);
+    --left-relative-leg-left:calc(var(--default-relative-left) + var(--fix-left-leg-left));
+}
+
+#Priker .head,
+#Priker .torso,
+#Priker .left-shoulder,
+#Priker .left-hand,
+#Priker .left-leg,
+#Priker .right-shoulder,
+#Priker .right-hand,
+#Priker .right-leg{
+    --default-relative-top:74px;
+    --default-relative-left:15px;
+    --fix-right-hand-left:26px;
+    --fix-right-hand-top:-76px;
+    --fix-left-hand-left:-21px;
+    --fix-left-hand-top:-66px;
+
+    --fix-left-leg-left:-18px;
+    --fix-right-shoulder-left:23px;
+    --fix-left-shoulder-left:-30px;
+
+    --head-relative-top:var(--default-relative-top);
+    --head-relative-left:var(--default-relative-left);
+    --torso-relative-top:var(--default-relative-top);
+    --torso-relative-left:var(--default-relative-left);
+    --right-relative-hand-top:calc(var(--default-relative-top) + var(--fix-right-hand-top));
+    --right-relative-hand-left:calc(var(--default-relative-left) + var(--fix-right-hand-left));
+    --right-relative-shoulder-top:var(--default-relative-top);
+    --right-relative-shoulder-left:calc(var(--default-relative-left) + var(--fix-right-shoulder-left));
+    --right-relative-leg-top:var(--default-relative-top);
+    --right-relative-leg-left:var(--default-relative-left);
+    --left-relative-hand-top:calc(var(--default-relative-top) + var(--fix-left-hand-top));
+    --left-relative-hand-left:calc(var(--default-relative-left) + var(--fix-left-hand-left));
+    --left-relative-shoulder-top:var(--default-relative-top);
+    --left-relative-shoulder-left:calc(var(--default-relative-left) + var(--fix-left-shoulder-left));
+    --left-relative-leg-top:var(--default-relative-top);
+    --left-relative-leg-left:calc(var(--default-relative-left) + var(--fix-left-leg-left));
+}
