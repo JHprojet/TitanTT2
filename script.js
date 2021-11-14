@@ -1,4 +1,4 @@
-const bossNames = ['Jukk','Lojak','Mohaca','Sterl','Takedar','Terro'];
+const bossNames = ['Jukk','Lojak','Mohaca','Sterl','Takedar','Terro','Klonk','Priker'];
 const bossParts = ['head','torso','left-shoulder','left-hand','left-leg','right-leg','right-hand','right-shoulder'];
 const mapPatternToStrategy = {0:'forbidden',1:'attack',2:'vm',3:'cursed'};
 const patternStrategyRegExp = new RegExp('[A-Za-z]+_([0-3],){7}[0-3]');
